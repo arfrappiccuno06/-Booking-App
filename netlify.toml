@@ -1,0 +1,25 @@
+# Netlify Configuration File
+
+[build]
+  # Build command
+  command = "npm run build"
+
+  # Output directory (Vite builds to 'dist' by default)
+  publish = "dist"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables
+# Note: Set these in Netlify Dashboard > Site settings > Environment variables
+# VITE_FIREBASE_API_KEY
+# VITE_FIREBASE_AUTH_DOMAIN
+# VITE_FIREBASE_DATABASE_URL
+# VITE_FIREBASE_PROJECT_ID
+# VITE_FIREBASE_STORAGE_BUCKET
+# VITE_FIREBASE_MESSAGING_SENDER_ID
+# VITE_FIREBASE_APP_ID
+# VITE_ADMIN_PASSWORD

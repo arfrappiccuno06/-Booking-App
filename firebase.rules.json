@@ -1,0 +1,30 @@
+{
+  "rules": {
+    "availability": {
+      ".read": true,
+      ".write": true,
+      "$dateKey": {
+        ".validate": "newData.isString() || (newData.hasChildren() && newData.val().length >= 0)"
+      }
+    },
+    "bookings": {
+      ".read": true,
+      ".write": true,
+      "$bookingId": {
+        ".validate": "newData.hasChildren(['clientName', 'date', 'time', 'timestamp'])",
+        "clientName": {
+          ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+        },
+        "date": {
+          ".validate": "newData.isString() && newData.val().matches(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/)"
+        },
+        "time": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "timestamp": {
+          ".validate": "newData.isNumber()"
+        }
+      }
+    }
+  }
+}
