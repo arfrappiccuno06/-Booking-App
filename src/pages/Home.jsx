@@ -26,7 +26,16 @@ const Home = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden px-4 py-4">
+    <div className="h-screen flex flex-col overflow-hidden px-2 py-4 relative">
+      {/* admin access button - top right corner */}
+      <Link
+        to="/admin"
+        className="absolute top-4 right-4 p-2 bg-white hover:bg-pink-100 rounded-full transition-colors shadow-soft flex items-center justify-center"
+        title="Admin Access"
+      >
+        <Lock className="w-5 h-5 text-pink-500" />
+      </Link>
+
       {/* header with title and instructions */}
       <div className="text-center mb-4 flex-shrink-0">
         <div className="flex items-center justify-center gap-2 mb-2">
@@ -37,17 +46,8 @@ const Home = () => {
           <Sparkles className="w-6 h-6 text-pink-500" />
         </div>
         <p className="text-white text-base font-semibold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.3)' }}>
-          Click on an available day to book your session! ✨
+          Click on an available day to book your session! 
         </p>
-
-        {/* link to admin page */}
-        <Link
-          to="/admin"
-          className="inline-flex items-center gap-2 mt-2 px-3 py-1 text-sm text-pink-600 hover:text-pink-700 hover:bg-pink-50 rounded-full transition-colors"
-        >
-          <Lock className="w-3 h-3" />
-          Admin Access
-        </Link>
       </div>
 
       {/* calendar component takes up remaining space */}
@@ -63,8 +63,8 @@ const Home = () => {
       />
 
       {/* footer */}
-      <div className="text-center mt-2 text-gray-500 text-xs flex-shrink-0">
-        Made with 💖 for learning
+      <div className="text-center mt-2 text-white-500 text-xs flex-shrink-0">
+        Made by Arfa
       </div>
     </div>
   );

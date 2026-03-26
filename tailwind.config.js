@@ -27,7 +27,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Quicksand', 'sans-serif'],
+        sans: ['"Bitcount Prop Double"', 'sans-serif'],
       },
       borderRadius: {
         'bubble': '20px',

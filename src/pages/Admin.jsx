@@ -91,7 +91,7 @@ const Admin = () => {
               Admin Access
             </h1>
             <p className="text-gray-600">
-              Enter your password to continue
+              Enter the secret code to continue
             </p>
           </div>
 
@@ -139,7 +139,7 @@ const Admin = () => {
 
   // admin dashboard - shown after successful login
   return (
-    <div className="min-h-screen py-8 px-4">
+    <div className="min-h-screen py-4 px-4">
       {/* header with logout button */}
       <div className="text-center mb-8">
         <div className="flex items-center justify-center gap-4 mb-4">
@@ -148,7 +148,7 @@ const Admin = () => {
           </h1>
           <button
             onClick={handleLogout}
-            className="p-2 rounded-full hover:bg-pink-100 transition-colors"
+            className="p-2 rounded-full bg-white hover:bg-pink-100 transition-colors shadow-soft"
             title="Logout"
           >
             <LogOut className="w-6 h-6 text-pink-500" />
